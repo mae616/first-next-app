@@ -3,14 +3,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "export": "next export",
-    "build": "next build && npm run export && npm run build:rss",
-    "build:rss": "node ./.next/server/scripts/build-rss.js",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/react": "^1.6.22",
     "dayjs": "^1.10.7",
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "nanoid": "^3.1.30",
     "next": "12.0.3",
