@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "export": "next export",
+    "build": "next build && npm run export && npm run build:rss",
+    "build:rss": "node ./.next/server/scripts/build-rss.js",
     "start": "next start",
     "lint": "next lint"
   },
