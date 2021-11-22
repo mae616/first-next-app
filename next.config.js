@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   target: 'serverless',
-  webpack: (config) => {
+  webpack: (config, options) => {
     if (!options.dev && options.isServer) {
       const originalEntry = config.entry
       config.entry = async () => {
@@ -10,5 +10,6 @@ module.exports = {
         return entries
       }
     }
+    return config
   }
 }
