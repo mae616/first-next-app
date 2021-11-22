@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  target: 'serverless',
   webpack: (config, options) => {
     if (!options.dev && options.isServer) {
       const originalEntry = config.entry
